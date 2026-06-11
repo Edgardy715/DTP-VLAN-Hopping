@@ -37,6 +37,9 @@ Demostrar cómo un atacante en una red local puede explotar el protocolo **DTP (
 | SW2 | G0/1 | Access | 10 | — |
 | Kali Atacante | eth0 / eth0.10 | VLAN tag 802.1Q | 10 | DHCP |
 
+### Imagen topologia
+![Topología](Topologia/Topologia.png)
+
 ***
 
 ## 🎯 Objetivo del Script
@@ -108,15 +111,6 @@ sudo python3 DTP_Attack_VLANHOPPING.py
 
 ***
 
-## 📸 Capturas de Pantalla
-
-> 📌 Agregar capturas de:
-> - Terminal mostrando la negociación DTP exitosa
-> - `show interfaces g0/1 switchport` → `Operational Mode: trunk`
-> - `ip addr show eth0.10` mostrando la IP obtenida en VLAN 10
-
-***
-
 ## 🛡️ Contramedidas y Mitigación
 
 > 📄 Ver comandos completos en: [`Mitigacion/SW2.ios`](Mitigacion/SW2.ios)
@@ -132,6 +126,6 @@ sudo python3 DTP_Attack_VLANHOPPING.py
 
 <div align="center">
 
-**EGALDITO_LAB** -  Ciberseguridad Ofensiva en Redes -  2024
+**EGALDITO_LAB** -  Ciberseguridad Ofensiva en Redes -  2025-0704
 
 </div>
