@@ -1,0 +1,27 @@
+!!!!!!!!!!! SW2 (puerto conectado al atacante)
+
+en
+conf t
+int g0/1
+ switchport mode access
+ switchport nonegotiate
+ switchport access vlan 10
+exit
+
+! Apagar puertos no utilizados
+interface range g0/2 - 3
+ shutdown
+exit
+
+! Cambiar VLAN nativa del trunk (no usar VLAN 1)
+vlan 999
+ name VLAN-NATIVA-DESCARTE
+exit
+
+int g0/0
+ switchport trunk native vlan 999
+ switchport nonegotiate
+exit
+
+end
+wr
